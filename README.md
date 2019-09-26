@@ -1,74 +1,65 @@
-# Massively
-> This is Massively, a text-heavy, article-oriented design built around a huge background
-image.
+# _Airspace_ for Jekyll
+![screenshot](screenshots/home.png "Description goes here")
 
-See a preview of the Massively Jekyll Theme here: [https://iwiedenm.github.io/jekyll-theme-massively/](https://iwiedenm.github.io/jekyll-theme-massively/). <br>
-Massively was originally designed by HTML5UP and Jekyll was integrated by [JekyllUp: Jekyll Themes](https://jekyllup.com)
+This Jekyll theme is a port of [ThemeFisher's](https://themefisher.com) [Airspace template](https://themefisher.com/products/airspace-free-bootstrap-website-template/). It is released under ThemeFisher's [license](https://themefisher.com/license) , which requires attribution. Concern about the licnese please contact with [them](mailto:themefisher@gmail.com)
 
-## How to Use This Theme
-Jekyll consumes themes in two flavors; gem-based or spread across multiple folders
-in the site source. This port is of the second type. Concretely, it means that you
-can simply grab the [zip][zip] or clone this repository, run `bundle install`
-in the new directory and finally `bundle exec jekyll serve`.
-You can now access your brand-new Jekyll site on [http://127.0.0.1:4000/][local].
-Enjoy!
+## Usage
+To start your project, [fork this respository](https://github.com/ndrewtl/airspace-jekyll/fork), put in your content, and go!
 
-If you're completely new to Jekyll, check out it's [documentation][jekyll] first.
-It's not too hard, we promise!
+## Examples
+Here are some projects that have used this Jekyll Theme:
+* [BOYUAN Open Source 博辕开源](https://boyuanitsm.github.io)
+* [Campus VC](https://mrchildneo.github.io/mrchildneo/)
+* [Mãos de amar](https://www.maosdeamar.com.br/)
+* [ATK Team](http://www.atksec.com/)
+* [Coding Club](https://ourcodingclub.github.io/)
+* [Dev Empathy Book Club](http://www.devempathybook.club/)
+* [DKAN Open Data Catalog](http://getdkan.com) (modified version of this theme)
 
-[zip]: https://github.com/iwiedenm/jekyll-theme-massively-src/archive/master.zip
-[local]: http://127.0.0.1:4000/
-[jekyll]: https://jekyllrb.com/
+## Steps for Setup:
 
-## Features
+### Make sure you have Ruby
 
-### Slapform.com Integration
-[Slapform](https://slapform.com) is supported out of the box! Just add your email to ```_config.yml``` and test the form.
-Every time one of your visitors submits the form, you'll get an email straight to your inbox containing the submission so you can get back to them right away. Slapform is very extendable, including AJAX submissions, webhooks, and more.
+First, make sure you have [Ruby](https://www.ruby-lang.org/en/) installed. You can confirm this by running `ruby -v` on the command line:
 
-### Auto-Generating Sitemap
-The sitemap is auto generated! Just simply change the sitemap variable in front matter of each page. It looks like so...
-```
-sitemap:
-  priority: 0.7
-  lastmod: 2017-11-02
-  changefreq: weekly
+```sh
+$ ruby -v
+ruby [version number] (date) [your platform]
 ```
 
-## Credits
-### Original README from HTML5 UP
+If you get something like `"Error, command not found"` visit the link above and
+install Ruby for your platform.
+
+
+### Make sure you have Bundler
+
+Next, make sure you have [Bundler](https://bundler.io) installed. Just like
+above, run `bundle -v` on the command line:
+
+```sh
+$ bundle -v
+bundle [version number]
 ```
-Massively by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
+If you get `"Error, command not found"` run `gem install bundler` to install it
+using RubyGems.
 
-This is Massively, a text-heavy, article-oriented design built around a huge background
-image (with a new parallax implementation I'm testing) and scroll effects (powered by
-Scrollex). A *slight* departure from all the one-pagers I've been doing lately, but one
-that fulfills a few user requests and makes use of some new techniques I've been wanting
-to try out. Enjoy it :)
+### Run this repository
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+Clone the repository, and `cd` into it:
+```sh
+$ git clone https://github.com/ndrewtl/airspace-jekyll.git
+$ cd airspace-jekyll
+```
 
-(* = not included)
+Install dependencies locally:
+```sh
+$ bundle install --path vendor/bundle
+```
 
-AJ
-aj@lkn.io | @ajlkn
+This should install a local copy of jekyll.
 
-
-Credits:
-
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fortawesome.github.com/Font-Awesome)
-
-	Other:
-		jQuery (jquery.com)
-		Misc. Sass functions (@HugoGiraudel)
-		Skel (skel.io)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
+Now run the server:
+```sh
+$ ./vendor/bundle/ruby/#{YOUR_RUBY_VERSION}/bin/jekyll server
 ```
